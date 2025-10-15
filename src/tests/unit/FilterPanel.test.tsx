@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import FilterPanel from '../../components/FilterPanel';
 
 test('renders filter inputs with defaults', () => {
-  render(<FilterPanel />);
+  render(<FilterPanel filters={{ radius_miles: 5 }} onChange={jest.fn()} />);
   expect(screen.getByLabelText(/price/i)).toBeInTheDocument();
   expect(screen.getByLabelText(/beds/i)).toBeInTheDocument();
   expect(screen.getByLabelText(/baths/i)).toBeInTheDocument();

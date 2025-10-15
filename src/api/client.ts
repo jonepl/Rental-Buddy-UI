@@ -1,12 +1,4 @@
-export interface RequestPayload {
-  address?: string;
-  latitude?: number;
-  longitude?: number;
-  radius_miles: number;
-  bedrooms?: number;
-  bathrooms?: number;
-  days_old?: string;
-}
+import type { RequestPayload } from '../types';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 

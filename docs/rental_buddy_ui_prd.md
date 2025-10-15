@@ -102,19 +102,24 @@ This MVP version supports:
 - Endpoint: `POST /api/v1/comps`  
 
 ### Request Rules
-- Either `address` OR (`latitude` + `longitude`) must be provided.  
-- Both cannot be null.  
-- `radius_miles` is required.  
-- Optional filters: `bedrooms`, `bathrooms`, `days_old`.  
+- You must provide either `address` OR both `latitude` and `longitude`.
+- Do not include both `address` and coordinates in the same request.
+- `radius_miles` is required.
 
-### Request Example
+### Request Example (address)
 ```json
 {
   "address": "123 Main St, Austin, TX",
-  "radius_miles": 5,
-  "bedrooms": 2,
-  "bathrooms": 1,
-  "days_old": "*:270"
+  "radius_miles": 5
+}
+```
+
+### Alternate Request Example (coordinates)
+```json
+{
+  "latitude": 30.2672,
+  "longitude": -97.7431,
+  "radius_miles": 5
 }
 ```
 

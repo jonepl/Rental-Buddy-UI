@@ -7,6 +7,7 @@ const config: Config = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
+    '^react-leaflet$': '<rootDir>/src/tests/mocks/react-leaflet.ts',
   },
   testMatch: ['**/src/tests/**/*.(test|spec).(ts|tsx)'],
 };

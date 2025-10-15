@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { postComps, type RequestPayload } from './client';
-import type { CompsResponse } from '../types';
+import { postComps } from './client';
+import type { CompsResponse, RequestPayload } from '../types';
 
 export function useCompsQuery(payload?: RequestPayload) {
   return useQuery<CompsResponse, Error>({
